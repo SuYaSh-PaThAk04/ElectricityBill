@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      background-color: #ffcc00;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #e6b800;
+      transform: scale(1.05);
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+
+    .card button {
+      padding: 10px 15px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background: #0056b3;
+    }
+
+    .help-support {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 40px 20px;
+    }
+
+    .help-support h2 {
+      font-size: 2rem;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .help-support p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .help-support a {
+      color: #ffcc00;
+      text-decoration: underline;
+    }
+
+    .help-support a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Electricity App</h1>
+    <div>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#help-support">Help & Support</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to the Electricity App</h1>
+    <p>Manage your bills, payments, and feedback all in one place.</p>
+    <button onclick="window.location.href='#dashboard'">Get Started</button>
+  </div>
+
+  <div id="dashboard" class="dashboard">
+    <div class="card">
+      <h2>Sign Up</h2>
+      <button onclick="window.location.href='signup.html'">Go to Sign Up</button>
+    </div>
+    <div class="card">
+      <h2>Bill Details</h2>
+      <button onclick="window.location.href='billdetails.html'">View Bill Details</button>
+    </div>
+    <div class="card">
+      <h2>Payment History</h2>
+      <button onclick="window.location.href='history.html'">View Payment History</button>
+    </div>
+    <div class="card">
+      <h2>Feedback</h2>
+      <button onclick="window.location.href='feedback.html'">Give Feedback</button>
+    </div>
+  </div>
+
+  <div id="help-support" class="help-support">
+    <h2>Help & Support</h2>
+    <p>If you have any questions or need assistance, feel free to contact us:</p>
+    <p>Email: <a href="mailto:support@electricity.com">support@electricity.com</a></p>
+    <p>Phone: +1-800-555-1234</p>
+    <p>For more information, visit our <a href="#">FAQs</a> page.</p>
+  </div>
+</body>
+</html>

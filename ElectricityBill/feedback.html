@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback/Rate Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .feedback-container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .feedback-header {
+      margin-bottom: 20px;
+    }
+
+    .feedback-header h1 {
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .feedback-header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .stars {
+      margin: 20px 0;
+    }
+
+    .stars input {
+      display: none;
+    }
+
+    .stars label {
+      font-size: 2rem;
+      color: #ddd;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: #ffcc00;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 20px 0;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .thank-you {
+      display: none;
+      margin-top: 20px;
+      color: green;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="feedback-container">
+    <div class="feedback-header">
+      <h1>Rate Us</h1>
+      <p>We value your feedback to improve our services.</p>
+    </div>
+
+    <form id="feedbackForm">
+      <div class="stars">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1">★</label>
+      </div>
+
+      <textarea id="feedbackText" rows="4" placeholder="Write your feedback here..."></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <div class="thank-you" id="thankYouMessage">
+      Thank you for your feedback!
+    </div>
+  </div>
+
+  <script>
+    const feedbackForm = document.getElementById('feedbackForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    feedbackForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const rating = document.querySelector('input[name="rating"]:checked');
+      const feedbackText = document.getElementById('feedbackText').value;
+
+      if (!rating) {
+        alert("Please select a star rating!");
+        return;
+      }
+
+      console.log("Rating:", rating.value);
+      console.log("Feedback:", feedbackText);
+
+      thankYouMessage.style.display = "block";
+      feedbackForm.reset();
+
+      // Simulate sending feedback to a server
+      setTimeout(() => {
+        thankYouMessage.style.display = "none";
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

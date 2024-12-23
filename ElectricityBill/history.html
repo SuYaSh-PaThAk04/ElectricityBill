@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment History</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .history-container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .history-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .history-header h1 {
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .history-header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table thead {
+      background-color: #007bff;
+      color: white;
+    }
+
+    table th, table td {
+      padding: 12px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    table th {
+      font-size: 1rem;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="history-container">
+    <div class="history-header">
+      <h1>Payment History</h1>
+      <p>Customer Name: John Doe</p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Payment ID</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Payment Method</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1001</td>
+          <td>01/12/2024</td>
+          <td>$44.10</td>
+          <td>Credit Card</td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>1002</td>
+          <td>01/11/2024</td>
+          <td>$50.25</td>
+          <td>Debit Card</td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>1003</td>
+          <td>01/10/2024</td>
+          <td>$39.80</td>
+          <td>Net Banking</td>
+          <td>Completed</td>
+        </tr>
+        <tr>
+          <td>1004</td>
+          <td>01/09/2024</td>
+          <td>$47.15</td>
+          <td>UPI</td>
+          <td>Pending</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p>For any queries, contact us at support@electricity.com</p>
+    </div>
+  </div>
+</body>
+</html>
